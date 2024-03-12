@@ -1,0 +1,7 @@
+a heuristic algorithm with polynomial complexity that performs the following activities:
+− loading an instance;
+− removing from the loaded nucleotide sequences positions with reliability below a certain threshold (this threshold is to be a parameter set by the user); for each left character, remember its place in the input sequence (before removing the characters), where the numbering should start from 1;
+− creating a graph with vertices corresponding to all several-letter substrings of the sequence after the above operation (the length of substrings ranging from 4 to 9 letters is to be the second parameter set by the user), each occurrence of the same substring is a separate vertex in the graph; for each vertex, you need to remember the number of its input sequence and the position within this sequence, which is the previously remembered place of the first character of the substring in the input sequence;
+− connecting vertices with undirected edges if they correspond to the same subsequences occurring in different sequences, and the difference in the positions of the subsequences within the sequence is not greater than ten times the length of the subsequence;
+− searching heuristically for a clique or a clique-like structure in the graph in which each input sequence will be represented by exactly one vertex;
+− writing the result at the output in the form: input sequence number, position number in this sequence, for each substring included in the clique (clique-like structure) and the nucleotide sequence of the subsequence.
